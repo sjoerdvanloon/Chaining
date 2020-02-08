@@ -81,7 +81,7 @@ namespace Chaining
         [Fact()]
         public void Do_ShouldWorkWithMultipleActions()
         {
-            var y = On<DotDotPage>().Do(x => x.FillIn(), y => y.FillIn(), y => y.FillIn(), y => y.FillIn());
+            var y = On<DotDotPage>().Do(x => x.FillIn(), x => x.FillIn(), x => x.FillIn(), x => x.FillIn());
 
             y.Page.Should().NotBeNull().And.BeOfType<DotDotPage>();
             _logActionCount.Should().Be(4);
